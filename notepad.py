@@ -7,7 +7,7 @@ import tkinter as tk
 #New File
 def newFile():
     global file
-    canvas.title("Untitled - Notepad - *Akaza*")
+    canvas.title("Untitled - Notepad - despair-fx")
     file = None
     TextArea.delete(1.0, END)
     
@@ -18,7 +18,7 @@ def openFile():
     if file == "":
         file = None
     else:
-        canvas.title(os.path.basename(file) + " - Notepad - *Akaza*")
+        canvas.title(os.path.basename(file) + " - Notepad - despair-fx")
         TextArea.delete(1.0, END)
         f = open(file, "r")
         TextArea.insert(1.0, f.read())
@@ -28,7 +28,7 @@ def openFile():
 #Save File
 def saveFile():
     global file
-    file = asksaveasfilename(initialfile = 'akaza.txt', defaultextension=".txt",filetypes=[("All Files", "*.*"),("Text Documents", "*.txt")])
+    file = asksaveasfilename(initialfile = 'despair.txt', defaultextension=".txt",filetypes=[("All Files", "*.*"),("Text Documents", "*.txt")])
     if file =="":
             file = None
 
@@ -37,7 +37,7 @@ def saveFile():
         f.write(TextArea.get(1.0, END))
         f.close()
 
-        canvas.title(os.path.basename(file) + " - Notepad - *Akaza*")
+        canvas.title(os.path.basename(file) + " - Notepad - despair-fx")
 
 
 #Cut
@@ -54,13 +54,13 @@ def paste():
 
 #About    
 def about():
-    showinfo("Notepad - *Akaza*", "<Simple GUI Notepad> - akaza-28")
+    showinfo("Notepad - despair-fx", "<Simple GUI Notepad> - despair-fx")
 
 
 #tkinter
 canvas = tk.Tk()
 canvas.geometry("750x600")
-canvas.title("Notepad - *Akaza*")
+canvas.title("Notepad - -desapir-fx")
 canvas.config(bg= "white")
 
 #Text Area
